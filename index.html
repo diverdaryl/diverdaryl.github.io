@@ -1,9 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HD Digital Signs Corp - Custom Display Solutions</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hd-blue': '#1e40af', // Darker Blue for Primary
+                        'hd-light': '#3b82f6', // Brighter Blue for Accents
+                        'hd-gray': '#f3f4f6', // Light gray background
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensuring smooth scrolling for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
-    <h1>HD Digital Signs Website is LIVE!</h1>
+<body class="font-sans antialiased bg-white text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Company Name -->
+                <a href="#hero" class="text-3xl font-extrabold text-hd-blue tracking-tight">
+                    HD Digital Signs<span class="text-hd-light">.</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#solutions" class="text-gray-600 hover:text-hd-light transition duration-150 font-medium">Solutions</a>
+                    <a href="#services" class="text-gray-600 hover:text-hd-light transition duration-150 font-medium">Services</a>
+                    <a href="#process" class="text-gray-600 hover:text-hd-light transition duration-150 font-medium">Process</a>
+                    <a href="#contact" class="px-4 py-2 text-white bg-hd-light hover:bg-hd-blue rounded-lg shadow-md transition duration-150">Get Quote</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative bg-hd-blue pt-20 pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="lg:w-2/3 text-white">
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+                        Illuminate Your Brand with Custom LED Displays
+                    </h1>
+                    <p class="text-xl sm:text-2xl font-light mb-10 opacity-90">
+                        HD Digital Signs Corp specializes in custom, high-resolution digital displays for advertising, branding, and interactive experiences.
+                    </p>
+                    <a href="#solutions" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl shadow-2xl bg-white text-hd-blue hover:bg-hd-gray transition duration-300 transform hover:scale-105">
+                        Explore Our Solutions
+                    </a>
+                </div>
+            </div>
+            <!-- Background image placeholder (for aesthetic appeal) -->
+            <div class="absolute inset-0 z-0 opacity-20">
+                <img src="https://placehold.co/1920x1080/000/fff?text=Digital+Signage+Background" 
+                     onerror="this.style.display='none'"
+                     alt="Abstract digital screen background" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <!-- Solutions/Products Section -->
+        <section id="solutions" class="py-20 sm:py-28 bg-hd-gray">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Our Display Solutions</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">From retail window displays to massive stadium scoreboards, we build it custom.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Solution Card 1: Indoor Displays -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl hover:shadow-hd-light/50 transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-5xl text-hd-light mb-4">💡</div> 
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Indoor LED Walls</h3>
+                        <p class="text-gray-600">Seamless, high-resolution screens perfect for boardrooms, lobbies, and control centers. Focus on fine pitch and clarity.</p>
+                        <ul class="mt-4 text-sm text-gray-500 space-y-1">
+                            <li>• Fine Pixel Pitch (P1.2 - P2.5)</li>
+                            <li>• Modular Design</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution Card 2: Outdoor Displays -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl hover:shadow-hd-light/50 transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-5xl text-hd-light mb-4">☀️</div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Outdoor Digital Billboards</h3>
+                        <p class="text-gray-600">Ultra-bright, weather-resistant displays built to withstand the elements while maintaining visibility.</p>
+                        <ul class="mt-4 text-sm text-gray-500 space-y-1">
+                            <li>• IP65 Waterproof Rating</li>
+                            <li>• High Nit Brightness (> 6000)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution Card 3: Specialty Displays -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl hover:shadow-hd-light/50 transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-5xl text-hd-light mb-4">📐</div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Custom & Flexible Displays</h3>
+                        <p class="text-gray-600">Curved, spherical, or transparent displays for unique architectural integration and artistic installations.</p>
+                        <ul class="mt-4 text-sm text-gray-500 space-y-1">
+                            <li>• Custom Shapes & Sizes</li>
+                            <li>• Transparent LED Screens</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services/Commitment Section -->
+        <section id="services" class="py-20 sm:py-28">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Our Full-Service Commitment</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">We handle every stage of your project, from conception to maintenance.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-4 gap-8 text-center">
+                    <div class="p-6 rounded-xl bg-white shadow-xl">
+                        <div class="text-4xl text-hd-blue mb-4">🎨</div>
+                        <h4 class="font-bold text-lg mb-2">Design & Planning</h4>
+                        <p class="text-sm text-gray-600">Site survey, structural plans, and custom pixel pitch recommendations.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white shadow-xl">
+                        <div class="text-4xl text-hd-blue mb-4">🏭</div>
+                        <h4 class="font-bold text-lg mb-2">Manufacturing</h4>
+                        <p class="text-sm text-gray-600">High-quality components assembled to exacting standards in our facility.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white shadow-xl">
+                        <div class="text-4xl text-hd-blue mb-4">🏗️</div>
+                        <h4 class="font-bold text-lg mb-2">Installation</h4>
+                        <p class="text-sm text-gray-600">Professional, certified installation ensuring structural integrity and safety.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white shadow-xl">
+                        <div class="text-4xl text-hd-blue mb-4">🔧</div>
+                        <h4 class="font-bold text-lg mb-2">Support & Service</h4>
+                        <p class="text-sm text-gray-600">24/7 remote monitoring and rapid on-site maintenance contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section (Simple Call to Action) -->
+        <section id="process" class="bg-hd-blue py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Visualize Your Impact?</h2>
+                <p class="text-xl mb-8 opacity-90">Our custom approach guarantees a solution tailored perfectly to your space and audience.</p>
+                <a href="#contact" class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-semibold rounded-xl shadow-2xl bg-hd-light text-white hover:bg-white hover:text-hd-blue transition duration-300 transform hover:scale-105">
+                    Start Your Project Today
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 sm:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Form Column -->
+                    <div>
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-6">Get a Free Consultation</h2>
+                        <p class="text-xl text-gray-600 mb-8">Tell us about your digital sign needs and we'll provide a detailed proposal.</p>
+                        
+                        <!-- Simple Contact Form Mockup -->
+                        <form action="#" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" name="name" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-hd-light focus:border-hd-light">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Work Email</label>
+                                <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-hd-light focus:border-hd-light">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Project Details</label>
+                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-hd-light focus:border-hd-light"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-3 px-6 border border-transparent rounded-xl shadow-md text-lg font-medium text-white bg-hd-blue hover:bg-hd-light transition duration-150 transform hover:scale-[1.01]">
+                                    Submit Request
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info Column -->
+                    <div class="bg-hd-gray p-10 rounded-xl shadow-inner mt-8 lg:mt-0">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
+                        <div class="space-y-6 text-gray-700">
+                            <p class="flex items-center">
+                                <span class="text-hd-blue text-xl mr-3">📞</span>
+                                (800) 555-0199
+                            </p>
+                            <p class="flex items-center">
+                                <span class="text-hd-blue text-xl mr-3">📧</span>
+                                sales@hddigitalsigns.com
+                            </p>
+                            <p class="flex items-start">
+                                <span class="text-hd-blue text-xl mr-3 mt-1">📍</span>
+                                123 Digital Way, Suite 400<br>
+                                Signage City, CA 90210
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-sm">
+            <p class="mb-4 sm:mb-0">&copy; 2025 HD Digital Signs Corp. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="#solutions" class="hover:text-hd-light">Solutions</a>
+                <a href="#services" class="hover:text-hd-light">Services</a>
+                <a href="#contact" class="hover:text-hd-light">Contact</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
