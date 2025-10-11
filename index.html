@@ -1,257 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HD Digital Signs Corporation - Top to Bottom Solutions</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons for Service Icons (Calculator, Briefcase, DollarSign) -->
-    <script type="module">
-        import { createIcons, Calculator, Briefcase, DollarSign } from 'https://cdn.jsdelivr.net/npm/lucide-esm@latest/dist/lucide-esm.js';
-        document.addEventListener('DOMContentLoaded', () => {
-            createIcons({ icons: { Calculator, Briefcase, DollarSign } });
-        });
-    </script>
-    <!-- Custom Tailwind Configuration: Defines the colors from your Canva design -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'hd-blue': '#3b82f6', // Primary Blue (Vibrant)
-                        'hd-dark': '#1e40af', // Darker blue for contrast
-                        'hd-purple': '#5b21b6', // Deep Purple accent (Contact Footer)
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        /* Style for the service icons circles */
-        .service-icon {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: rgba(59, 130, 246, 0.1); /* Light blue tint */
-            margin-bottom: 1rem;
-        }
-        .service-icon svg {
-            color: #3b82f6; /* Primary blue color */
-            width: 32px;
-            height: 32px;
-        }
-    </style>
-</head>
-<body class="font-sans antialiased bg-white text-gray-800">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HD Digital Signs Corporation</title>
+  <style>
+    /* GENERAL RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-    <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo/Company Name - Placeholder for HD Logo -->
-                <a href="#hero" class="block h-10 w-auto">
-                    <img src="https://placehold.co/150x40/1e40af/ffffff?text=HD+FINANCIAL+LOGO" 
-                         alt="HD Financial Logo Placeholder" 
-                         class="h-full w-auto">
-                </a>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#profile" class="text-gray-600 hover:text-hd-dark transition duration-150 font-medium">Profile</a>
-                    <a href="#roster" class="text-gray-600 hover:text-hd-dark transition duration-150 font-medium">Clients</a>
-                    <a href="#services" class="text-gray-600 hover:text-hd-dark transition duration-150 font-medium">Services</a>
-                    <a href="#contact" class="px-5 py-2 text-white bg-hd-blue hover:bg-hd-dark rounded-xl shadow-lg transition duration-150 transform hover:scale-[1.05]">Contact Us</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    body {
+      background-color: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
 
-    <main>
-        <!-- Hero Section (ILLUMINATE) -->
-        <section id="hero" class="bg-hd-blue pt-24 pb-20 sm:pt-32 sm:pb-28">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 items-center gap-12">
-                    <!-- Left Side: ILLUMINATE Text -->
-                    <div>
-                        <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight text-white mb-6 tracking-wide">
-                            ILLUMINATE
-                        </h1>
-                        <p class="text-xl text-white opacity-80 max-w-lg">
-                            We deliver thoughtful, top-to-bottom accounting and financial solutions tailored for corporate success.
-                        </p>
-                    </div>
-                    
-                    <!-- Right Side: Logo/Icon (Placeholder) -->
-                    <div class="flex justify-end items-center">
-                        <div class="bg-white p-6 rounded-xl shadow-2xl text-center">
-                            <img src="https://placehold.co/200x200/3b82f6/ffffff?text=HD+LOGO+MAIN" 
-                                 alt="HD Financial Corporation Logo Placeholder" 
-                                 class="w-32 h-32 md:w-48 md:h-48 mx-auto">
-                            <div class="text-2xl font-bold text-gray-800 mt-4">HD FINANCIAL</div>
-                            <div class="text-md tracking-wider text-gray-600">CORPORATION</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Company Profile Section -->
-        <section id="profile" class="py-16 sm:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 items-center gap-10">
-                    <!-- Left Side: Image Placeholder -->
-                    <div class="order-1">
-                        <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Corporate+Billboard+Image+Placeholder" 
-                             onerror="this.style.display='none'"
-                             alt="Digital billboards and advertisements" class="w-full h-auto rounded-xl shadow-2xl">
-                    </div>
-                    
-                    <!-- Right Side: Text Box -->
-                    <div class="order-2">
-                        <h2 class="text-4xl font-extrabold text-hd-dark mb-4">COMPANY PROFILE</h2>
-                        <p class="text-xl text-gray-700 leading-relaxed">
-                            Established in 1992, **Stratford Accounting** is a full-service firm offering affordable accounting solutions to individuals and local and international businesses.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    header {
+      background-color: #1e5af8;
+      color: #fff;
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        <!-- Client Roster Section -->
-        <section id="roster" class="bg-hd-dark py-16 sm:py-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-                <div class="grid lg:grid-cols-3 gap-10">
-                    <!-- Left Column: Heading and Description -->
-                    <div class="lg:col-span-1">
-                        <h2 class="text-4xl font-extrabold mb-4">OUR CLIENT ROSTER</h2>
-                        <p class="text-lg opacity-90">
-                            We've provided reliable service to our clientele since our early days. We've had the honor of being the firm of choice of the following corporations:
-                        </p>
-                    </div>
-                    
-                    <!-- Right Column: Client List -->
-                    <div class="lg:col-span-2 space-y-4 pt-4">
-                        <div class="border-b border-white/30 pb-3 text-2xl font-semibold hover:text-hd-blue transition duration-150">Belden Bank LTD</div>
-                        <div class="border-b border-white/30 pb-3 text-2xl font-semibold hover:text-hd-blue transition duration-150">Michaelson Digital</div>
-                        <div class="border-b border-white/30 pb-3 text-2xl font-semibold hover:text-hd-blue transition duration-150">Perlanton Securities</div>
-                        <div class="border-b border-white/30 pb-3 text-2xl font-semibold hover:text-hd-blue transition duration-150">Global Energy Systems</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Our Services Section -->
-        <section id="services" class="py-16 sm:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-extrabold text-hd-blue mb-2">OUR SERVICES</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Thoughtful solutions for every stage of your business growth.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-10 text-center">
-                    
-                    <!-- Service Card 1: Tax Preparation -->
-                    <div class="p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                        <div class="service-icon mx-auto">
-                            <svg data-lucide="Calculator"></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-hd-blue mb-2">Tax Preparation</h3>
-                        <p class="text-gray-600">We prepare everything you need for your tax return and ensure full compliance.</p>
-                    </div>
+    header h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
 
-                    <!-- Service Card 2: Start-up Package -->
-                    <div class="p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                        <div class="service-icon mx-auto">
-                            <svg data-lucide="Briefcase"></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-hd-blue mb-2">Start-up Package</h3>
-                        <p class="text-gray-600">We build financial models you can pitch to investors and manage initial setup.</p>
-                    </div>
+    header p {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 5px;
+      opacity: 0.9;
+    }
 
-                    <!-- Service Card 3: Wealth Management -->
-                    <div class="p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                        <div class="service-icon mx-auto">
-                            <svg data-lucide="DollarSign"></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-hd-blue mb-2">Wealth Management</h3>
-                        <p class="text-gray-600">We deliver thoughtful investment advisory services and portfolio planning.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    header img {
+      height: 70px;
+      width: auto;
+    }
 
-        <!-- Final Call to Action -->
-        <section class="bg-hd-blue py-16">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-                <h2 class="text-3xl sm:text-5xl font-extrabold leading-tight">
-                    COUNT ON US TO PROVIDE TOP TO BOTTOM ACCOUNTING SOLUTIONS FOR YOUR FIRM.
-                </h2>
-            </div>
-        </section>
+    /* HERO / BANNER */
+    .hero {
+      width: 100%;
+      height: auto;
+    }
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-0">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 bg-white rounded-xl shadow-2xl -mt-10 mb-20 overflow-hidden">
-                    
-                    <!-- Left Column: Image and Text (The 'LETS WORK TOGETHER' block) -->
-                    <div class="relative bg-gray-100 min-h-[300px] flex items-center justify-center">
-                        <div class="absolute inset-0 bg-hd-purple opacity-20"></div>
-                        <img src="https://placehold.co/800x600/e5e7eb/4b5563?text=Team+Working+Placeholder" 
-                             onerror="this.style.display='none'"
-                             alt="Team working together" class="w-full h-full object-cover mix-blend-multiply">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-start p-10">
-                            <h3 class="text-4xl font-bold text-white tracking-widest">LET'S WORK TOGETHER</h3>
-                        </div>
-                    </div>
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-                    <!-- Right Column: Contact Info Block -->
-                    <div class="bg-hd-dark p-10 text-white flex flex-col justify-center space-y-5">
-                        <h3 class="text-3xl font-bold mb-4">Get in Touch</h3>
-                        
-                        <div class="flex items-center space-x-3">
-                            <span class="text-2xl">📍</span>
-                            <div>
-                                <p class="font-semibold">Mailing Address</p>
-                                <p>113 Scout Rallos St., Diliman, Quezon City</p>
-                            </div>
-                        </div>
+    /* SECTION STYLES */
+    section {
+      padding: 60px 10%;
+    }
 
-                        <div class="flex items-center space-x-3">
-                            <span class="text-2xl">📧</span>
-                            <div>
-                                <p class="font-semibold">Email Address</p>
-                                <p>hddigitalsignscorp@gmail.com</p>
-                            </div>
-                        </div>
+    h2 {
+      color: #1e5af8;
+      font-size: 26px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
 
-                        <div class="flex items-center space-x-3">
-                            <span class="text-2xl">📞</span>
-                            <div>
-                                <p class="font-semibold">Phone Number</p>
-                                <p>+639178316041</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    p {
+      font-size: 16px;
+      color: #333;
+    }
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <p>&copy; 2025 HD Digital Signs Corporation. All rights reserved.</p>
-        </div>
-    </footer>
+    .blue-section {
+      background-color: #1e5af8;
+      color: #fff;
+    }
 
-</body>
-</html>
+    .blue-section h2 {
+      color: #fff;
+    }
+
+    .clients {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .clients ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .c
