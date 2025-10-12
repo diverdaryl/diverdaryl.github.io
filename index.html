@@ -1,76 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HD Digital Signs Corporation</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HD Digital Signs Corporation - Out-of-Home Advertising</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for Service Icons -->
+    <script type="module">
+        import { createIcons, Monitor, MapPin, Truck, LayoutDashboard, Search, ChevronRight } from 'https://cdn.jsdelivr.net/npm/lucide-esm@latest/dist/lucide-esm.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            createIcons({ icons: { Monitor, MapPin, Truck, LayoutDashboard, Search, ChevronRight } });
+        });
+    </script>
+    <!-- Custom Tailwind Configuration: Blue and Dark Theme for Digital Signage -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#0050FF', // Vibrant Digital Blue
+                        'secondary-dark': '#1A1A1A', // Deep Black/Dark Gray
+                        'accent-light': '#F0F0F0', // Off-white/light gray background
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        /* Style for subtle press logo effect */
+        .press-logo {
+            filter: grayscale(100%) opacity(70%);
+            transition: filter 0.3s;
+        }
+        .press-logo:hover {
+            filter: grayscale(0%) opacity(100%);
+        }
+    </style>
 </head>
-<body>
-  <!-- Header -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="assets/logo.png" alt="HD Digital Signs Logo">
-      <span>HD Digital Signs Corporation</span>
-    </div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#clients">Clients</a>
-      <a href="#contact" class="btn-outline">Work with us</a>
-    </nav>
-  </header>
+<body class="font-sans antialiased bg-accent-light text-gray-800">
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="overlay">
-      <div class="hero-content">
-        <h5>ILLUMINATE</h5>
-        <h1>Making Every Billboard<br>Shine Smarter</h1>
-        <p>High-definition outdoor media, smart placements, and hands-on campaign management that make brands impossible to ignore.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Company Name -->
+                <a href="#hero" class="block text-2xl font-bold text-primary-blue tracking-wider">
+                    HD Digital Signs.
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#solutions" class="text-gray-600 hover:text-primary-blue transition duration-150 font-medium">Services</a>
+                    <a href="#work" class="text-gray-600 hover:text-primary-blue transition duration-150 font-medium">Locations</a>
+                    <a href="#clients" class="text-gray-600 hover:text-primary-blue transition duration-150 font-medium">Roster</a>
+                    <a href="#contact" class="px-5 py-2 text-white bg-primary-blue hover:bg-secondary-dark rounded-lg shadow-lg transition duration-150">Get a Quote</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Services Section -->
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <p>We provide end-to-end out-of-home advertising solutions designed to make your brand shine brighter.</p>
-    <div class="services-grid">
-      <div class="service">
-        <h3>LED Billboard Ads</h3>
-        <p>Dynamic and eye-catching digital displays that deliver impact day and night.</p>
-      </div>
-      <div class="service">
-        <h3>Static Billboard Spaces</h3>
-        <p>High-visibility locations perfect for long-term brand presence.</p>
-      </div>
-      <div class="service">
-        <h3>Lamp Post & Transit Ads</h3>
-        <p>Reach audiences in motion with strategic street and transit placements.</p>
-      </div>
-      <div class="service">
-        <h3>Project Management</h3>
-        <p>From concept to installation, we handle every step with precision.</p>
-      </div>
-    </div>
-  </section>
+    <main>
+        <!-- Hero Section (Billboard Image on Light Background) -->
+        <section id="hero" class="pt-16 pb-10 sm:pt-24 sm:pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 items-center gap-12">
+                    <!-- Left Side: Image -->
+                    <div class="order-1 md:order-1">
+                        <img src="https://placehold.co/600x400/eeeeee/0050FF?text=Digital+Billboard+Image" 
+                             alt="Large digital billboard in a city" 
+                             class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+                    
+                    <!-- Right Side: Headline -->
+                    <div class="order-2 md:order-2">
+                        <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight text-secondary-dark mb-4 tracking-tight max-w-lg">
+                            Next-level Out-of-Home Digital Advertising Solutions
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Company Overview Section (Dark Background with Overlay Text) -->
+        <section id="overview" class="relative bg-secondary-dark py-24 sm:py-36 min-h-[400px]">
+            <!-- Placeholder for the dark background image -->
+            <img src="https://placehold.co/1200x600/333333/ffffff?text=Cityscape+at+Night+Background" 
+                 alt="Cityscape with illuminated billboards" 
+                 class="absolute inset-0 w-full h-full object-cover opacity-30">
+            
+            <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <p class="text-xl font-medium tracking-wide mb-4">
+                    The HD Edge
+                </p>
+                <h2 class="text-3xl sm:text-5xl font-extrabold leading-tight">
+                    We deliver high-impact, strategic Out-of-Home (OOH) media placements that guarantee maximum visibility for your brand in key urban areas.
+                </h2>
+            </div>
+        </section>
 
-  <!-- Clients Section -->
-  <section id="clients" class="section light">
-    <h2>Our Clients</h2>
-    <p>Trusted by leading brands across industries nationwide.</p>
-    <div class="clients-grid">
-      <img src="assets/client1.png" alt="Client Logo">
-      <img src="assets/client1.png" alt="Client Logo">
-      <img src="assets/client1.png" alt="Client Logo">
-      <img src="assets/client1.png" alt="Client Logo">
-    </div>
-  </section>
+        <!-- Services Section (Two-Column Layout) -->
+        <section id="solutions" class="py-16 sm:py-24 bg-accent-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-secondary-dark mb-10">Our Advertising Services</h2>
+                <div class="grid md:grid-cols-2 items-start gap-16">
+                    
+                    <!-- Left Column: Text Content -->
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-600 max-w-lg">
+                            From state-of-the-art LED boards to prime static placements, we manage the entire campaign lifecycle, ensuring your message reaches the right audience at the right time.
+                        </p>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Work with Us</h2>
-    <p>Let’s bring your brand to the streets and make it shine smarter.</p>
-    <div class="contact-info">
-      <p><stro
+                        <!-- Solution List -->
+                        <div class="grid grid-cols-2 gap-4 text-secondary-dark">
+                            <ul class="space-y-2">
+                                <li class="flex items-center space-x-2 font-medium">
+                                    <svg data-lucide="Monitor" class="w-4 h-4 text-primary-blue"></svg>
+                                    <span>Premium LED Digital Boards</span>
+                                </li>
+                                <li class="flex items-center space-x-2 font-medium">
+                                    <svg data-lucide="LayoutDashboard" class="w-4 h-4 text-primary-blue"></svg>
+                                    <span>Static Billboard Rental</span>
+                                </li>
+                                <li class="flex items-center space-x-2 font-medium">
+                                    <svg data-lucide="Search" class="w-4 h-4 text-primary-blue"></svg>
+                                    <span>Targeted Site Location Analysis</span>
+                                </li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="flex items-center space-x-2 font-medium">
+                                    <svg data-lucide="Truck" class="w-4 h-4 text-primary-blue"></svg>
+                                    <span>Billboard Fabrication & Installation</span>
+                                </li>
+                                <li class="flex items-center space-x-2 font-medium">
+                                    <svg data-lucide="MapPin" class="w-4 h-4 text-primary-blue"></svg>
+                                    <span>Permitting & Regulatory Compliance</span>
+                                </li>
+                                <li class="flex items-center space-x-2 font-medium">
+                                    <svg data-lucide="ChevronRight" class="w-4 h-4 text-primary-blue"></svg>
+                                    <span>Digital Content Management</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Image of a meeting -->
+                    <div>
+                        <img src="https://placehold.co/600x400/f0f0f0/1a1a1a?text=Billboard+Location+Planning" 
+                             alt="Team collaborating on map and locations" 
+                             class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locations Section (Dark Background) -->
+        <section id="work" class="bg-secondary-dark py-16 sm:py-24 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold mb-10">Prime Locations Across the Metro</h2>
+                <p class="text-lg opacity-80 max-w-3xl mb-12">
+                    Our inventory features high-traffic sites in commercial and residential hubs, ensuring your ad gets seen by thousands of commuters daily.
+                </p>
+                
+                <!-- Gallery of Three Images (Placeholder for site locations) -->
+                <div class="grid md:grid-cols-3 gap-6">
+                    <img src="https://placehold.co/400x300/333333/ffffff?text=EDSA+Corner" 
+                         alt="Featured location EDSA" 
+                         class="w-full h-auto object-cover rounded-lg hover:opacity-80 transition duration-300">
+                    <img src="https://placehold.co/400x300/333333/ffffff?text=Makati+CBD" 
+                         alt="Featured location Makati CBD" 
+                         class="w-full h-auto object-cover rounded-lg hover:opacity-80 transition duration-300">
+                    <img src="https://placehold.co/400x300/333333/ffffff?text=Quezon+City+Area" 
+                         alt="Featured location Quezon City" 
+                         class="w-full h-auto object-cover rounded-lg hover:opacity-80 transition duration-300">
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Clients (Press section repurposed as Client Roster) -->
+        <section id="clients" class="py-16 sm:py-24 bg-accent-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-secondary-dark mb-12">Our Client Roster</h2>
+                
+                <!-- Logos/Citations -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center">
+                    <img src="https://placehold.co/150x50/f0f0f0/1a1a1a?text=Major+Bank" 
+                         alt="Major Bank Logo" class="press-logo max-h-10 w-auto">
+                    <img src="https://placehold.co/150x50/f0f0f0/1a1a1a?text=Telecom+Co" 
+                         alt="Telecom Company Logo" class="press-logo max-h-10 w-auto">
+                    <img src="https://placehold.co/150x50/f0f0f0/1a1a1a?text=Retail+Brand" 
+                         alt="Retail Brand Logo" class="press-logo max-h-10 w-auto">
+                    <img src="https://placehold.co/150x50/f0f0f0/1a1a1a?text=Automotive" 
+                         alt="Automotive Company Logo" class="press-logo max-h-10 w-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials Section (Dark Background) -->
+        <section class="bg-secondary-dark py-16 sm:py-24 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold mb-12">Results That Speak Volumes</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <p class="italic mb-4 text-gray-300">
+                            "The visibility we gained from the HD Digital Boards was unprecedented. Our brand recall metrics doubled within the campaign period."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/50x50/999999/ffffff?text=P" 
+                                 alt="Profile picture of client" class="rounded-full mr-3">
+                            <div>
+                                <p class="font-semibold">Maria Santos</p>
+                                <p class="text-sm text-primary-blue">Marketing Head, E-Mart Retail</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <p class="italic mb-4 text-gray-300">
+                            "HD Digital Signs handled the entire production and deployment seamlessly. A truly turn-key OOH solution."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/50x50/999999/ffffff?text=P" 
+                                 alt="Profile picture of client" class="rounded-full mr-3">
+                            <div>
+                                <p class="font-semibold">Jose Reyes</p>
+                                <p class="text-sm text-primary-blue">Brand Manager, AutoCorp PH</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <p class="italic mb-4 text-gray-300">
+                            "Prime locations and competitive rates. HD Digital Signs is our first choice for national billboard campaigns."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/50x50/999999/ffffff?text=P" 
+                                 alt="Profile picture of client" class="rounded-full mr-3">
+                            <div>
+                                <p class="font-semibold">Alyssa Garcia</p>
+                                <p class="text-sm text-primary-blue">Media Buyer, Zenith Agency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-accent-light py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 items-center gap-12">
+                    
+                    <!-- Left Column: Contact Details (Updated with local PH info) -->
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-extrabold text-secondary-dark mb-6">Start Your Campaign Today</h2>
+                        <div class="space-y-4 text-gray-600">
+                            <p class="font-semibold text-primary-blue text-lg">HD Digital Signs Corporation</p>
+                            <p>
+                                <span class="font-semibold">Address:</span> 113 Scout Rallos St., Quezon City
+                                <a href="https://maps.app.goo.gl/YourMapLink" target="_blank" class="text-primary-blue hover:underline ml-2 text-sm">(View Map)</a>
+                            </p>
+                            <p>
+                                <span class="font-semibold">Email:</span> 
+                                <a href="mailto:hddigitalsignscorp@gmail.com" class="text-primary-blue hover:underline">hddigitalsignscorp@gmail.com</a>
+                            </p>
+                            <p>
+                                <span class="font-semibold">Phone:</span> 
+                                <a href="tel:+639178316041" class="text-primary-blue hover:underline">+63917-831-60-41</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Image -->
+                    <div class="order-1 md:order-2">
+                        <img src="https://placehold.co/600x400/f0f0f0/1a1a1a?text=Philippines+City+Street" 
+                             alt="Digital marketer at a large monitor" 
+                             class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-dark text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 HD Digital Signs Corporation. All rights reserved. | <a href="#contact" class="hover:underline text-primary-blue">Contact Us</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
