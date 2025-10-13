@@ -56,4 +56,78 @@
 
     .services p,
     .clients p,
-    .conta
+    .contact p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .clients-logos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .clients-logos img {
+      width: 120px;
+      height: auto;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+
+    .clients-logos img:hover {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header img {
+        width: 130px;
+      }
+      header h1 {
+        font-size: 1.4rem;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="HD Digital Signs Logo" />
+    <h1>Bringing Brands to Life, One Billboard at a Time</h1>
+  </header>
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <p>We offer LED and static billboard advertising, lamp post banners, and custom outdoor displays designed to maximize your brand’s visibility across prime locations in the Philippines.</p>
+  </section>
+
+  <section class="clients">
+    <h2>Our Clients</h2>
+    <p>Trusted by leading local and international brands who value innovation and impact in out-of-home advertising.</p>
+    <div class="clients-logos">
+      <img src="assets/client1.png" alt="Client 1" />
+      <img src="assets/client2.png" alt="Client 2" />
+      <img src="assets/client3.png" alt="Client 3" />
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Work With Us</h2>
+    <p>Let’s collaborate to create impactful campaigns that connect with your audience.</p>
+    <p>Email us at <strong>info@hddigitalsigns.com</strong></p>
+  </section>
+
+  <footer>
+    © 2025 HD Digital Signs Corporation. All Rights Reserved.
+  </footer>
+</body>
+</html>
