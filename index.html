@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HD Digital Signs Corporation</title>
   <style>
     * {
@@ -12,10 +12,40 @@
     }
 
     body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
       color: #fff;
       background-color: #000;
       overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      border-bottom: 1px solid #222;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ccc;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff2b2b;
     }
 
     /* HERO SECTION */
@@ -23,4 +53,142 @@
       position: relative;
       height: 100vh;
       background: url('billboard-bg.jpg') no-repeat center center/cover;
-      displa
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #ccc;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .cta-btn {
+      background-color: #ff2b2b;
+      color: #fff;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #cc2323;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 10%;
+      background-color: #111;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      border-left: 4px solid #ff2b2b;
+      padding-left: 10px;
+    }
+
+    .services, .clients {
+      color: #ccc;
+      line-height: 1.6;
+      font-size: 1rem;
+      max-width: 900px;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="Logo.png" alt="HD Digital Signs Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Making Every Billboard Shine Smarter</h1>
+      <p>HD Digital Signs delivers powerful outdoor visibility with smart LED boards, static placements, and managed OOH solutions for every brand.</p>
+      <button class="cta-btn">Work With Us</button>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <p><strong>LED Billboard Ads</strong> – Dynamic displays with unbeatable clarity and reach.</p>
+      <p><strong>Static Billboard Rentals</strong> – Prime locations for long-term brand presence.</p>
+      <p><strong>Lamp Post & Transit Ads</strong> – Reach people on the move with high-frequency visibility.</p>
+      <p><strong>OOH Project Management</strong> – From planning to execution, we handle it all.</p>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section id="clients">
+    <h2>Our Clients</h2>
+    <div class="clients">
+      <p>Trusted by top brands nationwide, we make sure your message shines across every city skyline.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 HD Digital Signs Corporation. All Rights Reserved.
+  </footer>
+</body>
+</html>
