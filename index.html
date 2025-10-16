@@ -175,48 +175,33 @@
   </div>
 </section>
 
-<!-- Available OOH Sites Section -->
-<section id="inventories" style="background-color: #f8f9fa; padding: 60px 20px; text-align: center; position: relative; z-index: 1; clear: both;">
-  <div class="content" style="max-width: 1200px; margin: 0 auto;">
-    <h1 style="color: #003366; margin-bottom: 20px;">Available OOH Sites</h1>
-    <p style="margin-bottom: 40px;">Explore our premium out-of-home advertising locations designed for maximum visibility and impact.</p>
+<section id="inventories" style="background-color: #f8f9fa; padding: 60px 20px; text-align: center;">
+  <h2 style="font-size: 2rem; color: #333; margin-bottom: 40px;">Our OOH Inventories</h2>
 
-    <div class="inventory-gallery" style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
-      <!-- Main Image -->
-      <img src="NAIA T1.png" alt="Available OOH Sites at NAIA T1"
-           style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-
-      <!-- Hidden Images -->
-      <div id="more-sites" style="display: none; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 40px; margin-top: 20px;">
-        <img src="NAIA T1-2.png" alt="Available OOH Sites at NAIA T1-2"
-             style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-        <img src="NAIA T1-3.png" alt="Available OOH Sites at NAIA T1-3"
-             style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-        <img src="NAIA T1-4.png" alt="Available OOH Sites at NAIA T1-4"
-             style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-      </div>
-
-      <!-- Button -->
-      <button onclick="toggleSites()" style="margin-top: 10px; padding: 12px 24px; background-color: #003366; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
-        View More Sites
-      </button>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; justify-items: center;">
+    
+    <div>
+      <img src="NAIA T1-1.png" alt="Available OOH Sites at NAIA T1-1" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <p>NAIA Terminal 1-1</p>
     </div>
+
+    <div>
+      <img src="NAIA T2-2.png" alt="Available OOH Sites at NAIA T1-2" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <p>NAIA Terminal 1-2</p>
+    </div>
+
+    <div>
+      <img src="NAIA T1-3.png" alt="Available OOH Sites at NAIA T1-3" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <p>NAIA Terminal 1-3</p>
+    </div>
+
+    <div>
+      <img src="NAIA T1-4.png" alt="Available OOH Sites at NAIA T1-4" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <p>NAIA Terminal T1-4</p>
+    </div>
+
+    <!-- Add more inventories below -->
   </div>
-
-  <script>
-    function toggleSites() {
-      const moreSites = document.getElementById('more-sites');
-      const button = event.target;
-
-      if (moreSites.style.display === 'none' || moreSites.style.display === '') {
-        moreSites.style.display = 'flex';
-        button.textContent = 'Show Less';
-      } else {
-        moreSites.style.display = 'none';
-        button.textContent = 'View More Sites';
-      }
-    }
-  </script>
 </section>
 
 <!-- ABOUT SECTION -->
