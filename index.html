@@ -180,16 +180,43 @@
   <div class="content">
     <h1 style="color: #003366;">Available OOH Sites</h1>
     <p>Explore our premium out-of-home advertising locations designed for maximum visibility and impact.</p>
+
     <div class="inventory-image" style="margin-top: 30px;">
       <img src="NAIA T1.png" alt="Available OOH Sites at NAIA T1"
-      <img src="NAIA T1-2.png" alt="Available OOH Sites at NAIA T1-2"
-      <img src="NAIA T1-3.png" alt="Available OOH Sites at NAIA T1-3"
-      <img src="NAIA T1-4.png" alt="Available OOH Sites at NAIA T1-4"
            style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+
+      <!-- Hidden Images -->
+      <div id="more-sites" style="display: none; margin-top: 30px;">
+        <img src="NAIA T1-2.png" alt="Available OOH Sites at NAIA T1-2"
+             style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin-top: 20px;">
+        <img src="NAIA T1-3.png" alt="Available OOH Sites at NAIA T1-3"
+             style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin-top: 20px;">
+        <img src="NAIA T1-4.png" alt="Available OOH Sites at NAIA T1-4"
+             style="max-width: 90%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin-top: 20px;">
+      </div>
+
+      <!-- View More Button -->
+      <button onclick="toggleSites()" style="margin-top: 20px; padding: 10px 20px; background-color: #003366; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        View More Sites
+      </button>
     </div>
   </div>
-</section>
 
+  <script>
+    function toggleSites() {
+      const moreSites = document.getElementById('more-sites');
+      const button = event.target;
+
+      if (moreSites.style.display === 'none') {
+        moreSites.style.display = 'block';
+        button.textContent = 'Show Less';
+      } else {
+        moreSites.style.display = 'none';
+        button.textContent = 'View More Sites';
+      }
+    }
+  </script>
+</section>
 
 <!-- ABOUT SECTION -->
   <section id="about" style="background-image: url('billboard-bg.jpg');">
