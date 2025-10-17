@@ -143,12 +143,60 @@
       filter: grayscale(0%);
     }
 
+    /* Inventories Section Fix */
     #inventories {
-  margin-top: 120px; /* creates spacing from the section above */
-  position: relative;
-  z-index: 3; /* keeps it above background overlay layers */
-}
+      background-color: #ffffff;
+      padding: 100px 20px;
+      margin-top: 120px;
+      text-align: center;
+      border-top: 5px solid #004aad;
+      color: #003366;
+      position: relative;
+      z-index: 3;
+      height: auto;
+    }
 
+    .inventory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      margin-top: 40px;
+    }
+
+    .zoomable {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .zoomable:hover {
+      transform: scale(1.03);
+    }
+
+    /* Modal for Zoomed Images */
+    #imageModal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #modalImage {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
   </style>
 </head>
 <body>
@@ -176,19 +224,18 @@
 
 <!-- SERVICES SECTION -->
 <section id="services" style="background-image: url('Lamp-post-banners.jpg'); background-attachment: fixed;">
-<div class="content">
+  <div class="content">
     <h1>Our Services</h1>
     <p>From LED boards to static billboards, lamp post banners, and custom outdoor solutions, we deliver impact through design and technology.</p>
   </div>
 </section>
-  
+
 <!-- Available OOH Sites Section -->
-<section id="inventories" style="background-color:#f8f9fa;padding:60px 20px;text-align:center;">
+<section id="inventories">
   <div class="content">
-    <h1 style="color:#003366;">Available OOH Sites</h1>
+    <h1>Available OOH Sites</h1>
     <p>Explore our premium out-of-home advertising locations designed for maximum visibility and impact.</p>
-    
-    <div class="inventory-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:20px;justify-items:center;margin-top:40px;">
+    <div class="inventory-grid">
       <img src="NAIA T1-1.png" alt="NAIA T1-1" class="zoomable">
       <img src="NAIA T1-2.png" alt="NAIA T1-2" class="zoomable">
       <img src="NAIA T1-3.png" alt="NAIA T1-3" class="zoomable">
@@ -204,8 +251,8 @@
 </section>
 
 <!-- Zoom Modal -->
-<div id="imageModal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;">
-  <img id="modalImage" src="" alt="Zoomed Image" style="max-width:90%;max-height:90%;border-radius:10px;box-shadow:0 0 20px rgba(255,255,255,0.3);">
+<div id="imageModal">
+  <img id="modalImage" src="" alt="Zoomed Image">
 </div>
 
 <script>
@@ -214,11 +261,6 @@
   const zoomables = document.querySelectorAll(".zoomable");
 
   zoomables.forEach(img => {
-    img.style.width = "100%";
-    img.style.maxWidth = "500px";
-    img.style.borderRadius = "12px";
-    img.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
-    img.style.cursor = "pointer";
     img.addEventListener("click", () => {
       modal.style.display = "flex";
       modalImg.src = img.src;
@@ -229,7 +271,7 @@
 </script>
 
 <!-- ABOUT SECTION -->
-  <section id="about" style="background-image: url('billboard-bg.jpg');">
+<section id="about" style="background-image: url('billboard-bg.jpg');">
   <div class="content">
     <h1>About Us</h1>
     <p>Backed by more than 30 years of combined OOH experience, we integrate collaboration, technology, and creativity to redefine outdoor media in the Philippines.</p>
@@ -263,3 +305,4 @@
 
 </body>
 </html>
+
