@@ -414,5 +414,57 @@
   <p>© 2025 HD Digital Signs Corporation. All rights reserved.</p>
 </footer>
 
+<!-- CHATBOT -->
+<div class="chatbot-container">
+  <div class="chatbot-window" id="chatWindow">
+    <div class="chatbot-header">Chat with HD Digital</div>
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="chat-message bot">Hi there! How can we help you today?</div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="chatInput" placeholder="Type a message..." />
+      <button id="chatSend">Send</button>
+    </div>
+  </div>
+  <div class="chatbot-icon" id="chatIcon">💬</div>
+</div>
+
+<script>
+  const chatIcon = document.getElementById('chatIcon');
+  const chatWindow = document.getElementById('chatWindow');
+  const chatMessages = document.getElementById('chatMessages');
+  const chatInput = document.getElementById('chatInput');
+  const chatSend = document.getElementById('chatSend');
+
+  chatIcon.addEventListener('click', () => {
+    chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  chatSend.addEventListener('click', sendMessage);
+  chatInput.addEventListener('keypress', e => {
+    if (e.key === 'Enter') sendMessage();
+  });
+
+  function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+    const userMsg = document.createElement('div');
+    userMsg.className = 'chat-message';
+    userMsg.textContent = text;
+    chatMessages.appendChild(userMsg);
+    chatInput.value = '';
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    // simple bot reply
+    setTimeout(() => {
+      const botMsg = document.createElement('div');
+      botMsg.className = 'chat-message bot';
+      botMsg.textContent = "Thanks for reaching out! Our team will get back to you soon.";
+      chatMessages.appendChild(botMsg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 800);
+  }
+</script>
+
 </body>
 </html>
