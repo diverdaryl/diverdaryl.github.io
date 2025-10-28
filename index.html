@@ -92,16 +92,29 @@
   </style>
 </head>
 
- /* HISTORY SECTION FIX */
-    #history {
-      background-color: #ffffff !important;
-      position: relative !important;
-      z-index: 5 !important;
-      color: #1a1a1a !important;
+ /* HISTORY + TRIVIA SECTION */
+    #history-trivia {
+      background-color: #f4f8fc;
+      padding: 60px 20px;
     }
-    #history * {color: #1a1a1a !important;}
-    #history::before, #history::after {display: none !important;}
-    section#history {background: #ffffff !important;}
+
+    .history-container, .trivia-container {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .trivia-item {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .trivia-item strong {
+      color: #004aad;
+    }
 
     <!-- CHATBOT -->
   <div class="chatbot-container">
@@ -265,6 +278,29 @@
     </div>
   </div>
 </section>
+
+ <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Zoomed">
+  </div>
+
+  <!-- HISTORY + TRIVIA -->
+  <section id="history-trivia">
+    <h2>History of OOH and Trivia</h2>
+
+    <div class="history-container">
+      <h3>History of Out-of-Home Advertising</h3>
+      <p>Out-of-Home (OOH) advertising began as painted signs and posters in the 1800s. Over time, it evolved into massive billboards and today’s digital LED displays that dominate cities worldwide. In the Philippines, OOH has become a vital part of marketing, reaching millions of commuters every day.</p>
+    </div>
+
+    <div class="trivia-container">
+      <h3>OOH Trivia Corner</h3>
+      <div class="trivia-item"><strong>Did you know?</strong> The first recorded billboard lease in the world happened in 1867!</div>
+      <div class="trivia-item"><strong>Fact:</strong> LED billboards are now among the most energy-efficient ad formats.</div>
+      <div class="trivia-item"><strong>Trivia:</strong> Studies show that 70% of commuters notice digital billboards daily.</div>
+    </div>
+  </section>
 
 <!-- MODAL -->
 <div id="imageModal">
@@ -524,6 +560,42 @@
 <footer>
   <p>© 2025 HD Digital Signs Corporation. All rights reserved.</p>
 </footer>
+
+ <script>
+    // LIGHTBOX
+    let lightboxImages = [];
+    let currentIndex = 0;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(images, index) {
+      lightboxImages = images;
+      currentIndex = index;
+      lightboxImg.src = lightboxImages[currentIndex];
+      lightbox.style.display = 'flex';
+      document.addEventListener('keydown', handleKeyPress);
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.removeEventListener('keydown', handleKeyPress);
+    }
+
+    function handleKeyPress(e) {
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'Escape') closeLightbox();
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % lightboxImages.length;
+      lightboxImg.src = lightboxImages[currentIndex];
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + lightboxImages.length) % lightboxImages.length;
+      lightboxImg.src = lightboxImages[currentIndex];
+    }  
  
 <!-- CHATBOT -->
 <div class="chatbot-container">
