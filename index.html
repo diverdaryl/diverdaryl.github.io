@@ -92,26 +92,16 @@
   </style>
 </head>
 
-/* === FIX HISTORY OF OOH SECTION === */
-#history {
-  background-color: #ffffff !important;
-  position: relative !important;
-  z-index: 5 !important;
-  color: #1a1a1a !important;
-}
-
-#history * {
-  color: #1a1a1a !important;
-}
-
-#history::before,
-#history::after {
-  display: none !important;
-}
-
-section#history {
-  background: #ffffff !important;
-}
+ /* HISTORY SECTION FIX */
+    #history {
+      background-color: #ffffff !important;
+      position: relative !important;
+      z-index: 5 !important;
+      color: #1a1a1a !important;
+    }
+    #history * {color: #1a1a1a !important;}
+    #history::before, #history::after {display: none !important;}
+    section#history {background: #ffffff !important;}
 
     <!-- CHATBOT -->
   <div class="chatbot-container">
@@ -480,7 +470,6 @@ section#history {
   </div>
 </div>
  
-
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; max-width:1000px; margin:0 auto;">
       <div style="background:white; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:25px;">
         <h3 style="color:#004aad;">1900s</h3>
@@ -522,9 +511,7 @@ section#history {
     triviaIndex = (triviaIndex + 1) % triviaList.length;
     document.getElementById("trivia-text").textContent = triviaList[triviaIndex];
   }, 5000);
-</script>
-
- 
+</script> 
 
 <!-- CONTACT -->
 <section id="contact" style="background-color: #004aad;">
@@ -537,7 +524,7 @@ section#history {
 <footer>
   <p>© 2025 HD Digital Signs Corporation. All rights reserved.</p>
 </footer>
-
+ 
 <!-- CHATBOT -->
 <div class="chatbot-container">
   <div class="chatbot-icon" id="chatIcon">💬</div>
