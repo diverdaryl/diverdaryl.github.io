@@ -92,48 +92,25 @@
   </style>
 </head>
 
-  /* ===== FIX HISTORY SECTION ===== */
+/* === FIX HISTORY OF OOH SECTION === */
 #history {
-  background: #f9fafc !important;
-  position: relative;
-  z-index: 2;
+  background-color: #ffffff !important;
+  position: relative !important;
+  z-index: 5 !important;
+  color: #1a1a1a !important;
 }
 
-#history::before {
+#history * {
+  color: #1a1a1a !important;
+}
+
+#history::before,
+#history::after {
   display: none !important;
 }
 
-#history .content {
-  color: #003366 !important;
-  position: relative;
-  z-index: 3;
-}
-
-#history h1, #history h2, #history h3, #history p {
-  color: #003366 !important;
-}
-
-/* Timeline fix */
-#history div[style*="inline-flex"] {
-  display: flex !important;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 30px;
-  padding: 20px 10px;
-  scroll-snap-type: x mandatory;
-}
-
-#history div[style*="inline-flex"] > div {
-  scroll-snap-align: start;
-  flex: 0 0 auto;
-  background: #fff;
-  color: #003366;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#history div[style*="inline-flex"] > div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+section#history {
+  background: #ffffff !important;
 }
 
     <!-- CHATBOT -->
