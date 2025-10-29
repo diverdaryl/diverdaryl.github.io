@@ -401,84 +401,20 @@
   </div>
 </section>
 
-<!-- HISTORY OF OOH SECTION (click-to-zoom thumbnail) -->
-<section id="history-ooh" style="background-color:#ffffff; padding:80px 20px; text-align:center; border-top:5px solid #004aad;">
-  <div class="content" style="max-width:900px; margin:0 auto;">
-    <h1 style="color:#004aad; font-size:2.2em; margin-bottom:18px;">History of Out-of-Home Advertising</h1>
-    <p style="font-size:1.05em; line-height:1.7; color:#003366; margin-bottom:18px;">
-      Out-of-Home (OOH) advertising started as painted signs and posters, evolved into large billboards, 
-      and now uses LED and digital screens to reach audiences across cities.
+<!-- HISTORY OF OOH SECTION -->
+<section id="history-ooh" style="background-color: #ffffff; padding: 100px 20px; text-align: center; border-top: 5px solid #004aad;">
+  <div class="content" style="max-width: 900px; margin: 0 auto;">
+    <h1 style="color: #004aad; font-size: 2.5em; margin-bottom: 25px;">History of Out-of-Home Advertising</h1>
+    <p style="font-size: 1.1em; line-height: 1.8; color: #003366;">
+      Out-of-Home (OOH) advertising has been part of human communication for centuries. 
+      It began with ancient wall paintings and public signage, evolved into printed posters in the 1800s, 
+      and became iconic large-scale billboards in the 20th century. 
+      Today, OOH is revolutionized by LED and digital screens, blending creativity and technology to engage audiences everywhere.
     </p>
-
-    <!-- thumbnail -->
-    <img id="historyThumb"
-         src="images/OOH.png"
-         alt="History of OOH"
-         style="width:260px; max-width:100%; height:auto; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.2); cursor:pointer;">
-
-    <!-- zoom modal (hidden by default) -->
-    <div id="zoomModal" aria-hidden="true" style="
-        display:none;
-        position:fixed;
-        inset:0;
-        background:rgba(0,0,0,0.85);
-        z-index:9999;
-        align-items:center;
-        justify-content:center;
-        padding:40px;
-    ">
-      <img id="zoomedImage" src="" alt="Zoomed" style="max-width:90%; max-height:85vh; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.5); transform:scale(0.95); transition:transform .18s ease;">
-    </div>
+    <img src="OOH.png" alt="History of OOH Advertising" 
+         style="max-width: 500px; height: auto; border-radius: 12px; margin-top: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
   </div>
 </section>
-
-<script>
-  (function () {
-    const thumb = document.getElementById('historyThumb');
-    const modal = document.getElementById('zoomModal');
-    const zoomed = document.getElementById('zoomedImage');
-
-    if (!thumb || !modal || !zoomed) return;
-
-    // open zoom
-    thumb.addEventListener('click', () => {
-      // verify the image src is reachable
-      zoomed.src = thumb.src;
-      modal.style.display = 'flex';
-      modal.setAttribute('aria-hidden', 'false');
-      // small animation
-      requestAnimationFrame(() => zoomed.style.transform = 'scale(1)';
-      );
-      document.body.style.overflow = 'hidden'; // prevent background scroll
-    });
-
-    // clicking outside image closes
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-
-    // prevent closing when clicking the image itself
-    zoomed.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-
-    // close on Esc
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
-    });
-
-    function closeModal() {
-      zoomed.style.transform = 'scale(0.95)';
-      modal.setAttribute('aria-hidden', 'true');
-      setTimeout(() => {
-        modal.style.display = 'none';
-        zoomed.src = '';
-      }, 160);
-      document.body.style.overflow = '';
-    }
-  })();
-</script>
-
 
 <!-- OOH TRIVIA SECTION -->
 <section id="ooh-trivia" style="background-color: #f5f7fa; padding: 100px 20px; text-align: center; border-top: 5px solid #004aad;">
